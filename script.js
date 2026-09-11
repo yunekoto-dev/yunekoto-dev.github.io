@@ -279,4 +279,79 @@ document.addEventListener("keydown", event => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+async function loadRepos() {
+  const repoContainer = document.getElementById("repos");
+  const countEl = document.getElementById("repoCount");
+  const followersEl = document.getElementById("followers");
+  const followingEl = document.getElementById("following");
+  const starsEl = document.getElementById("stars");
+
+  if (repoContainer) {
+    repoContainer.innerHTML = '<div class="loading">Fetching from GitHub API...</div>';
+  }
+
+  try {
+    // 1. Récupération des infos du profil
+    const userRes = await fetch("https://api.github.com/users/yunekoto-dev");
+    if (!userRes.ok) throw new Error("Erreur profil GitHub");
+    const userData = await userRes.json();
+
+    if (countEl) countEl.textContent = userData.public_repos;
+    if (followersEl) followersEl.textContent = userData.followers;
+    if (followingEl) followingEl.textContent = userData.following;
+
+    // 2. Récupération des dépôts public
+    const reposRes = await fetch("https://api.github.com/users/yunekoto-dev/repos?sort=updated&per_page=6");
+    if (!reposRes.ok) throw new Error("Erreur dépôts GitHub");
+    const reposData = await reposRes.json();
+
+    // Calcul du nombre d'étoiles totales
+    const totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+    if (starsEl) starsEl.textContent = totalStars;
+
+    // 3. Affichage des dépôts dans la section
+    if (repoContainer) {
+      if (reposData.length === 0) {
+        repoContainer.innerHTML = '<div class="loading">Aucun dépôt disponible.</div>';
+        return;
+      }
+
+      repoContainer.innerHTML = reposData.map(repo => `
+        <div class="repo">
+          <div>
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+            <p>${repo.description || "Pas de description."}</p>
+          </div>
+          <div class="repo-meta">
+            <span>★ ${repo.stargazers_count}</span>
+            <br>
+            <span>${repo.language || "Texte"}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+  } catch (err) {
+    if (repoContainer) {
+      repoContainer.innerHTML = `<div class="loading">Erreur : ${err.message}</div>`;
+    }
+  }
+}
+
+// Charger automatiquement les données GitHub au chargement de la page
+window.addEventListener("DOMContentLoaded", () => {
+  loadRepos();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
+
 window.addEventListener("load", () => input.focus());
