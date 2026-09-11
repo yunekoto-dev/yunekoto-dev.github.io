@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#b68cff"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="1" y="1" width="998" height="298" rx="22" fill="#11111a" stroke="#29293b"/>
+     <clipPath id="avatarClip"><circle cx="72" cy="70" r="38"/></clipPath>
+       <circle cx="72" cy="70" r="40" fill="url(#g)" filter="url(#glow)"/>
+       <image href="https://avatars.githubusercontent.com/u/326973844?v=4&amp;s=160" xlink:href="https://avatars.githubusercontent.com/u/326973844?v=4&amp;s=160" x="34" y="32" width="76" height="76" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
+     <text x="130" y="62" fill="#f5f7ff" font-size="30" font-family="Inter,Arial" font-weight="700">GitHub overview</text>
+     <text x="130" y="92" fill="#9296a8" font-size="17" font-family="Inter,Arial">@yunekoto-dev</text>
+     <g font-family="Inter,Arial">
+       <text x="55" y="160" fill="#9296a8" font-size="15">REPOSITORIES</text>
+       <text x="55" y="198" fill="#f5f7ff" font-size="30" font-weight="700">1</text>
+       <text x="280" y="160" fill="#9296a8" font-size="15">STARS</text>
+       <text x="280" y="198" fill="#f5f7ff" font-size="30" font-weight="700">1</text>
+       <text x="505" y="160" fill="#9296a8" font-size="15">FOLLOWERS</text>
+       <text x="505" y="198" fill="#f5f7ff" font-size="30" font-weight="700">2</text>
+       <text x="730" y="160" fill="#9296a8" font-size="15">FORKS</text>
+       <text x="730" y="198" fill="#f5f7ff" font-size="30" font-weight="700">0</text>
+       <text x="55" y="250" fill="#9296a8" font-size="14">Public profile statistics · refreshed automatically</text>
+     </g>
+</svg>

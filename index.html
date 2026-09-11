@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Yunekoto — Developer · Creator · Builder">
+  <title>Yunekoto // Developer</title>
+  <link rel="icon" href="assets/mascots/cat-black.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <nav class="nav">
+    <a class="brand" href="#top"><span>YUNEKOTO</span><i>_</i></a>
+    <div class="nav-links">
+      <a href="#about">about</a><a href="#stack">stack</a><a href="#projects">projects</a><a href="#github">github</a><a href="#contact">contact</a>
+    </div>
+    <button class="nav-terminal" onclick="focusTerminal()">$ terminal</button>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> ONLINE // BUILDING THINGS</p>
+        <h1>Yunekoto<span class="cursor">_</span></h1>
+        <p class="role">Developer · Creator · Builder</p>
+        <p class="motto">“Build what you wish already existed.”</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore projects</a>
+          <a class="btn" href="https://github.com/yunekoto-dev" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <img src="assets/mascots/cat-black.png" alt="Yunekoto black cat mascot">
+        <span class="badge b1">RUST</span><span class="badge b2">TS</span><span class="badge b3">SYSTEMS</span>
+      </div>
+    </section>
+
+    <section class="terminal-wrap" id="terminal">
+      <div class="terminal-aiko" onclick="focusTerminal()">
+        <div class="terminal-mantle">
+          <div class="terminal-lights" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="terminal-base">
+          <div id="terminalOutput" class="terminal-output"></div>
+          <div class="terminal-prompt-row" id="terminalPromptRow">
+            <div class="terminal-prompt">
+              <span class="prompt-blue">yunekoto</span>@<span class="prompt-pink">yunekoto</span>:~$
+            </div>
+            <div class="terminal-input-wrap">
+              <span id="autocompleteGhost" class="autocomplete-ghost" aria-hidden="true"></span>
+              <input
+                id="terminalInput"
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="confused? type 'help' and press Enter to get started!"
+                aria-label="Terminal command"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-kicker">01 / ABOUT ME</div>
+      <div class="about-grid">
+        <div><h2>I like making<br><em>ideas tangible.</em></h2></div>
+        <div class="copy">
+          <p>I'm a passionate, project-oriented developer who enjoys exploring almost every layer of software.</p>
+          <p>I like turning ideas into concrete tools, experimenting with unfamiliar technologies, and pushing projects as far as I can.</p>
+          <p>When I catch myself thinking “this could have been done differently”, I would rather try to build it myself.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section-kicker">02 / STACK</div>
+      <div class="stack-grid">
+        <div class="stack-card stack-card-wide">
+          <span>LANGUAGES</span>
+          <div class="tool-grid">
+            <a class="tool" href="https://www.rust-lang.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/rust" alt=""><b>Rust</b><small>rust-lang.org ↗</small></a>
+            <a class="tool" href="https://gcc.gnu.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/c" alt=""><b>C</b><small>gcc.gnu.org ↗</small></a>
+            <a class="tool" href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/openjdk" alt=""><b>Java</b><small>oracle.com/java ↗</small></a>
+            <a class="tool" href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/javascript" alt=""><b>JavaScript</b><small>ECMAScript ↗</small></a>
+            <a class="tool" href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/typescript" alt=""><b>TypeScript</b><small>typescriptlang.org ↗</small></a>
+            <a class="tool" href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/python" alt=""><b>Python</b><small>python.org ↗</small></a>
+            <a class="tool" href="https://www.php.net/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/php" alt=""><b>PHP</b><small>php.net ↗</small></a>
+            <a class="tool" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/html5" alt=""><b>HTML</b><small>MDN ↗</small></a>
+            <a class="tool" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/css" alt=""><b>CSS</b><small>MDN ↗</small></a>
+          </div>
+        </div>
+        <div class="stack-card stack-card-wide">
+          <span>WEB / APPS</span>
+          <div class="tool-grid">
+            <a class="tool" href="https://nodejs.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nodedotjs" alt=""><b>Node.js</b><small>nodejs.org ↗</small></a>
+            <a class="tool" href="https://react.dev/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/react" alt=""><b>React</b><small>react.dev ↗</small></a>
+            <a class="tool" href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/vuedotjs" alt=""><b>Vue</b><small>vuejs.org ↗</small></a>
+            <a class="tool" href="https://www.electronjs.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/electron" alt=""><b>Electron</b><small>electronjs.org ↗</small></a>
+            <a class="tool" href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/firebase" alt=""><b>Firebase</b><small>firebase.google.com ↗</small></a>
+            <a class="tool" href="https://supabase.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/supabase" alt=""><b>Supabase</b><small>supabase.com ↗</small></a>
+          </div>
+        </div>
+        <div class="stack-card stack-card-wide">
+          <span>SYSTEMS / TOOLING</span>
+          <div class="tool-grid">
+            <a class="tool" href="https://www.linux.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/linux" alt=""><b>Linux</b><small>linux.org ↗</small></a>
+            <a class="tool" href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/docker" alt=""><b>Docker</b><small>docker.com ↗</small></a>
+            <a class="tool" href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/git" alt=""><b>Git</b><small>git-scm.com ↗</small></a>
+            <a class="tool" href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/visualstudiocode" alt=""><b>VS Code</b><small>code.visualstudio.com ↗</small></a>
+            <a class="tool" href="https://developer.mozilla.org/en-US/docs/Glossary/REST" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/postman" alt=""><b>REST APIs</b><small>MDN ↗</small></a>
+            <a class="tool" href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/socketdotio" alt=""><b>WebSockets</b><small>MDN ↗</small></a>
+          </div>
+        </div>
+      </div>
+      <p class="icon-credit">Brand icons provided via Simple Icons CDN.</p>
+    </section>
+
+    <section class="section split" id="exploring">
+      <div><div class="section-kicker">03 / CURRENTLY EXPLORING</div><h2>Always learning.<br><em>Always shipping.</em></h2></div>
+      <ul class="explore-list">
+        <li>Systems programming & emulation <span>↗</span></li>
+        <li>Advanced Rust <span>↗</span></li>
+        <li>Modern web architecture <span>↗</span></li>
+        <li>Software architecture & tooling <span>↗</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-kicker">04 / FEATURED PROJECTS</div>
+      <div class="project-card featured">
+        <div class="project-number">01</div>
+        <div><div class="status">● IN DEVELOPMENT</div><h3>GameBoy / GameBoy Color /<br>GameBoy Advance Emulator</h3><p>A Rust-based multi-system emulator currently under development.</p><div class="tags"><span>Rust</span><span>Emulation</span><span>Low-level</span><span>Systems</span></div></div>
+        <div class="project-cat"><img src="assets/mascots/cat-keyboard.png" alt=""></div>
+      </div>
+      <div class="coming"><div><span>02</span><b>PROJECT_02</b></div><small>COMING SOON</small></div>
+      <div class="coming"><div><span>03</span><b>PROJECT_03</b></div><small>COMING SOON</small></div>
+    </section>
+
+    <section class="section" id="github">
+      <div class="section-kicker">05 / GITHUB</div>
+      <div class="github-head"><h2>Code in public.<br><em>Stats included.</em></h2><a href="https://github.com/yunekoto-dev" target="_blank">github.com/yunekoto-dev ↗</a></div>
+      <div class="github-grid">
+        <div class="stat-card"><strong id="repoCount">—</strong><span>PUBLIC REPOS</span></div>
+        <div class="stat-card"><strong id="followers">—</strong><span>FOLLOWERS</span></div>
+        <div class="stat-card"><strong id="following">—</strong><span>FOLLOWING</span></div>
+        <div class="stat-card"><strong id="stars">—</strong><span>STARS EARNED</span></div>
+      </div>
+      <div class="repo-panel"><div class="repo-panel-head"><span>RECENT REPOSITORIES</span><button onclick="loadRepos()">↻ refresh</button></div><div id="repos"><div class="loading">Fetching from GitHub API...</div></div></div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-kicker">06 / CONTACT</div>
+      <h2>Have an idea?<br><em>Let's build it.</em></h2>
+      <div class="contact-links">
+        <a href="mailto:yunekoto@proton.me"><span>EMAIL</span>yunekoto@proton.me ↗</a>
+        <a href="https://github.com/yunekoto-dev" target="_blank"><span>GITHUB</span>@yunekoto-dev ↗</a>
+        <a href="https://tinyurl.com/yunekoto-discord" target="_blank"><span>DISCORD</span>yunekoto ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>YUNEKOTO // BUILD · EXPLORE · CREATE</span><span>© <span id="year"></span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

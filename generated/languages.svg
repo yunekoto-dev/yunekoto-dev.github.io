@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#b68cff"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="1" y="1" width="998" height="298" rx="22" fill="#11111a" stroke="#29293b"/>
+     <text x="55" y="60" fill="#f5f7ff" font-size="30" font-family="Inter,Arial" font-weight="700">Most used languages</text>
+     <text x="55" y="88" fill="#9296a8" font-size="15" font-family="Inter,Arial">Aggregated across all public, non-forked repositories</text>
+     <rect x="55" y="110" width="890" height="26" rx="13" fill="#1c1c2b"/>
+     <clipPath id="barClip"><rect x="55" y="110" width="890" height="26" rx="13"/></clipPath>
+     <g clip-path="url(#barClip)">
+       <rect x="55.00" y="110" width="890.00" height="26" fill="#7c5cff"/>
+     </g>
+     <g>
+       <circle cx="55" cy="184" r="7" fill="#7c5cff"/>
+       <text x="73" y="190" fill="#f5f7ff" font-size="16" font-family="Inter,Arial" font-weight="600">TypeScript</text>
+       <text x="73" y="208" fill="#9296a8" font-size="13" font-family="Inter,Arial">100.0%</text>
+     </g>
+</svg>
