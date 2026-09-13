@@ -352,17 +352,13 @@ if ('scrollRestoration' in history) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (!window.location.hash) {
-    window.location.replace(window.location.pathname + window.location.search + "#top");
-  }
   loadRepos();
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-  if (input) {
-    input.focus({ preventScroll: true });
-  }
+  setTimeout(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, 50);
 });
