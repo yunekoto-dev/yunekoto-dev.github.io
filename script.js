@@ -347,6 +347,10 @@ async function loadRepos() {
   }
 }
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 // Charger automatiquement les données GitHub au chargement de la page
 window.addEventListener("DOMContentLoaded", () => {
   loadRepos();
@@ -354,4 +358,10 @@ window.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-window.addEventListener("load", () => input.focus({ preventScroll: true }));
+// Force le retour en haut et donne le focus sans faire défiler la page
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+  if (input) {
+    input.focus({ preventScroll: true });
+  }
+});
