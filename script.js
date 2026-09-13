@@ -354,4 +354,4 @@ window.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-window.addEventListener("load", () => input.focus());
+window.addEventListener("load", () => input.focus({ preventScroll: true }));
