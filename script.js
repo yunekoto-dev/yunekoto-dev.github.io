@@ -2,6 +2,10 @@ const out = document.getElementById("terminalOutput");
 const input = document.getElementById("terminalInput");
 const ghost = document.getElementById("autocompleteGhost");
 
+if (!window.location.hash) {
+  window.location.replace(window.location.pathname + window.location.search + "#top");
+}
+
 const COMMANDS = [
   ["b64", "b64 [string]", "Encode to Base64 format", "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b68cff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='16 18 22 12 16 6'/><polyline points='8 6 2 12 8 18'/></svg>"],
   ["clear", "clear", "Clear the terminal screen", "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b68cff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z'/><line x1='18' y1='9' x2='12' y2='15'/><line x1='12' y1='9' x2='18' y2='15'/></svg>"],
@@ -351,14 +355,12 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
-// Charger automatiquement les données GitHub au chargement de la page
 window.addEventListener("DOMContentLoaded", () => {
   loadRepos();
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-// Force le retour en haut et donne le focus sans faire défiler la page
 window.addEventListener("load", () => {
   window.scrollTo(0, 0);
   if (input) {
